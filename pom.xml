@@ -4,7 +4,7 @@
 
 	<groupId>org.openmrs.module</groupId>
 	<artifactId>registrationcore</artifactId>
-	<version>1.7.2-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>Registration Core Module</name>
 	<description>Provides core utilities and services for patient registration.</description>
@@ -39,8 +39,8 @@
 		<eventVersion>2.3</eventVersion>
 		<namephoneticsVersion>1.4</namephoneticsVersion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<xdsSenderVersion>1.0.0</xdsSenderVersion>
-		<mpiClientVersion>1.0.0-SNAPSHOT</mpiClientVersion>
+		<xdsSenderVersion>2.0.0-SNAPSHOT</xdsSenderVersion>
+		<mpiClientVersion>1.0.1-SNAPSHOT</mpiClientVersion>
 		<apacheHttpCoreVersion>4.4.9</apacheHttpCoreVersion>
 		<apacheHttpClientVersion>4.5</apacheHttpClientVersion>
 		<jodaTimeVersion>2.2</jodaTimeVersion>
@@ -225,6 +225,12 @@
 
 	<repositories>
 		<repository>
+			<id>isanteplus-github</id>
+			<name>Github iSantePlus Packages</name>
+			<url>https://maven.pkg.github.com/isanteplus/isanteplus-packages</url>
+			<snapshots><enabled>true</enabled></snapshots>
+		</repository>
+		<repository>
 			<id>openmrs-repo</id>
 			<name>OpenMRS Nexus Repository</name>
 			<url>http://mavenrepo.openmrs.org/nexus/content/repositories/public</url>
@@ -246,17 +252,18 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-    <distributionManagement>
-        <repository>
-            <id>openmrs-repo-modules</id>
-            <name>OpenMRS Modules</name>
-            <url>http://mavenrepo.openmrs.org/nexus/content/repositories/modules</url>
-        </repository>
-        <snapshotRepository>
-            <id>openmrs-repo-snapshots</id>
-            <name>OpenMRS Snapshots</name>
-            <url>http://mavenrepo.openmrs.org/nexus/content/repositories/snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
+	<!-- Github Packages Integration -->
+	<distributionManagement>
+		<repository>
+			<id>isanteplus-github</id>
+			<name>Github iSantePlus Packages</name>
+			<url>https://maven.pkg.github.com/isanteplus/isanteplus-packages</url>
+		</repository>
+		<snapshotRepository>
+			<id>isanteplus-github</id>
+			<name>Github iSantePlus Packages</name>
+			<url>https://maven.pkg.github.com/isanteplus/isanteplus-packages</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 </project>
