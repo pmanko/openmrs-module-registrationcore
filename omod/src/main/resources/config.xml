@@ -31,9 +31,6 @@
 		<require_module version="${mpiClientVersion}">
 			org.openmrs.module.santedb-mpiclient
 		</require_module>
-		<require_module version="${mpiClientVersion}">
-			org.openmrs.module.santedb-mpiclient
-		</require_module>
     </require_modules>
 
 	<extension>
